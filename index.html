@@ -1,12 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Static Template</title>
+    <meta charset="utf-8" />
+
+    <!--responsywność w html-->
+    <meta name="viewport" content="width=device-width-initial-scale=1.0" />
+    <title>landig page Renata Kaczyńska</title>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
   </head>
+
   <body>
-    <h1>This is a static template, there is no bundler or bundling involved!</h1>
+    <nav id="smartfon-menu">
+      <input type="checkbox" id="burger-shower" class="burger-shower" />
+
+      <label for="burger-shower" class="hamburger">
+        <hr />
+        <hr />
+        <hr />
+      </label>
+
+      <ul class="burger-menu">
+        <li>
+          <label for="burger-shower">
+            <a href="#top">top</a>
+          </label>
+        </li>
+
+        <li>
+          <label for="burger-shower">
+            <a href="#tresc">treść</a>
+          </label>
+        </li>
+
+        <li>
+          <label for="burger-shower">
+            <a href="#statystyki">statystyki</a>
+          </label>
+        </li>
+
+        <li>
+          <label for="burger-shower">
+            <a href="#korzysci">korzyści</a>
+          </label>
+        </li>
+        <li>
+          <label for="burger-shower">
+            <a href="#pielegnacja">pielęgnacja</a>
+          </label>
+        </li>
+      </ul>
+    </nav>
+    <nav id="desktop-menu">
+      <ol>
+        <li class="space">
+          <a href="#top"><img src="img/logo.png"/></a>
+        </li>
+        <li class="space"></li>
+        <li><a href="#tresc">treść</a></li>
+        <li><a href="#statystyki">statystyki</a></li>
+        <li><a href="#korzysci">korzyści</a></li>
+        <li><a href="#pielegnacja">pielęgnacja</a></li>
+      </ol>
+    </nav>
+
+    <section id="top">
+      <div class="kontener">
+        <h1>Zadbaj o ogród z planerem...</h1>
+        <h2>Zorganizuj swój czas poswięcany na ogród.</h2>
+        <button class="pZielony">zobacz demo</button>
+        <button class="pAzur">dowiedz się więce</button>
+      </div>
+    </section>
+
+    <section id="tresc">
+      <h1>Organizuj prace w ogrodzie</h1>
+
+      <div class="kontener">
+        <div class="kolumna">
+          <p>
+            „Planner ogrodowy” jest aplikacją do planowania prac ogrodowych. Ma
+            w wygodny sposób powiadamiać o pracach, które należy wykonać, by
+            zadbać o rośliny znajdujące się w ogrodzie. Rozwiązuje problem
+            sezonowości prac w ogrodzie i ma za zadanie przypominanie o ich
+            terminowym wykonaniu. Żadna aplikacja sama nie wykona za nas pracy
+            ogrodowej, lecz może bardzo pomóc w organizacji tych zadań.
+            Zakładam, że na początku korzystania z mojej aplikacji, użytkownik
+            określi, jakie ma składowe ogrodu: rabaty, żywopłoty, trawniki,
+            pnącza.
+          </p>
+        </div>
+        <div class="kolumna">
+          <p>
+            W ich kontekście będzie otrzymywał powiadomienia o nadchodzących
+            pracach: rabaty - pielenie, żywopłoty - przycinanie, trawniki -
+            koszenie, pnącza - nawożenie. Spodziewam się, że niejeden laik
+            chętnie zapozna się ze wskazówkami fachowca o czasie przeprowadzania
+            prac w ciągu roku. Zadaniem aplikacji będzie przekazanie informacji
+            na temat potrzebnych narzędzi, które ułatwią mu pracę, czy czasu
+            jaki powinien na nią poświęcić. Pozna fachowe sposoby efektywnego
+            wykonania zadania.
+          </p>
+        </div>
+        <div class="kolumna">
+          <p>
+            ble ble ble ale bełkot
+          </p>
+        </div>
+      </div>
+
+      <button class="pZielony">czytaj dalej</button>
+    </section>
+
+    <section id="statystyki">
+      <div class="kontener">
+        <div class="kolumna">
+          <img src="img/tel.png" />
+          <h1>286</h1>
+          <h2>pobrań</h2>
+        </div>
+
+        <div class="kolumna">
+          <img src="img/per.png" />
+          <h1>170</h1>
+          <h2>użytkowników</h2>
+        </div>
+
+        <div class="kolumna">
+          <img src="img/dab.png" />
+          <h1>500</h1>
+          <h2>dostępnych roślin</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="korzysci">
+      <div class="kontener">
+        <div id="foto1">
+          <!--
+				<img class="zdjdesk" src="img/3_apki.png">
+				<img class="zdjmob" src="img/3_apki_mob.png">
+			-->
+        </div>
+
+        <div id="lista_korzysci">
+          <h1>Korzyści</h1>
+          <ol>
+            <li>Rrzypomnienia o pracach ogrodowych</li>
+            <li>Rejestr prac</li>
+            <li>Dostę do tysięcy roślin</li>
+            <li>Informacje o pracach w ogrodzie</li>
+          </ol>
+          <ul>
+            <li>wskazówki</li>
+            <li>rady</li>
+            <li>narzędzia</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="zach">
+      <div class="kontener">
+        <div id="zacheta">
+          <h1>Jedyna</h1>
+          <h1>Niepowtarzalna</h1>
+          <h1>tak zorganizowana...</h1>
+        </div>
+        <div id="foto2">
+          <!--
+				<img class="zdjdesk" src="img/3_apki.png">
+				<img class="zdjmob" src="img/3_apki_mob.png">
+			-->
+        </div>
+      </div>
+    </section>
+
+    <section id="pielegnacja">
+      <div class="kontener">
+        <div class="obrazek_avocado">
+          <img class="appStor" src="img/avocado.jpg" />
+        </div>
+      </div>
+      <div class="kontener">
+        <div class="tekscik">
+          <!--
+				test
+			-->
+          <p>
+            Awokado można uprawiać w warunkach domowych wykorzystując pestkę z
+            zakupionego owocu. Roślina wprawdzie będzie miniaturą w porównaniu z
+            okazami rosnącymi w środowisku naturalnym, jednak dzięki gęstemu
+            pokrojowi i skórzastym liściom (10-15 cm długości) stanie się
+            niesztampową ozdobą wnętrz. W dobrych warunkach awokado może
+            zakwitnąć (mało atrakcyjne żółtozielone wiechy), a nawet wykształcić
+            owoce – chociaż to drugie to zjawisko raczej rzadkie. Owocowanie
+            jest możliwe po 6-8 latach od posadzenia rośliny w doniczce.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="foot">
+      <div class="kontener">
+        <center><p>Copyright &copy; Renata Kaczyńska 2019</p></center>
+      </div>
+    </footer>
   </body>
 </html>

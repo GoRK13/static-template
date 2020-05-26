@@ -1,0 +1,396 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+section{
+	padding: 100px 0;
+}
+
+.kontener {
+	max-width: 1400px;
+	margin: auto;
+	
+	/*zawartoÅÄ kontenera jest elastyczna - obok siebie*/
+	display: flex;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+#smartfon-menu{display: none;
+	position: fixed;
+	margin: 30px;
+	width: 100%;
+}
+.burger-shower {display: none;}
+.burger-shower:checked ~ .burger-menu {display: block;}
+.hamburger {
+	display:block;
+	width: 50px;
+	height: 40px;
+	line-height: 3px;
+	background-color: #333;
+	padding: 4px 10px;
+}
+.hamburger:hover{background-color: whitesmoke;}
+.hamburger hr {
+	color: #ddd;
+	height: 4px;
+	border: 0;
+	margin: 5px 0;
+	background: #ddd;
+}
+.hamburger:hover hr{background: #333;}
+.burger-menu {display:none;}
+
+#smartfon-menu ul{
+	background-color: #333;
+	padding: 1em 0;
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+	list-style-type: none;
+	text-align: center;
+}
+#smartfon-menu ul li{line-height:3em;}
+#smartfon-menu ul li:hover{background-color: whitesmoke;}
+#smartfon-menu ul li a{
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+#smartfon-menu ul li:hover a{	color: #333;}
+
+#desktop-menu{
+	background-color: rgba(0,0,0,0.5);
+	height: 70px;
+	line-height: 70px;
+	
+	position:fixed;
+	width: 100%;
+}
+#desktop-menu ol{
+	display: flex;
+	flex-wrap: nowrap;
+}
+#desktop-menu ol li{
+	height: 70px;
+	flex: 1 1 200px;
+	text-align: center;
+}
+#desktop-menu ol li:hover{
+	background-color: black;
+}
+#desktop-menu ol li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 700;
+	color: white;
+	display: block;
+}
+
+.space{
+	vertical-align: bottom !important;
+	padding-top: 10px;
+}
+.space:hover{
+	background-color: rgba(0,0,0,0) !important;
+}
+
+#top{
+	height: 1080px;
+	background:url(../img/Top_pecet.jpg)no-repeat center right fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+#top .kontener{
+	display: block;
+	padding-top: 200px;
+	
+	color: white;
+}
+#top h1{
+	font-size: 42px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 20px;
+}
+#top h2{
+	font-size: 28px;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin: 20px;
+}
+#top .pZielony{
+	background-color: #4CAF50;
+  	border: none;
+  	color: white;
+  	padding: 15px 25px;
+  	text-align: center;
+  	font-size: 16px;
+  	cursor: pointer;
+  	border-radius: 100px;
+  	margin: 20px;
+}
+#top .pAzur{
+  	border: 2px solid white;
+  	border-color: white;
+  	background-color: transparent;
+  	color: white;
+  	padding: 15px 25px;
+  	text-align: center;
+  	font-size: 16px;
+  	cursor: pointer;
+  	border-radius: 100px;
+  	margin: 20px;
+}
+
+/****************************/
+#tresc{
+	color: gray;
+}
+#tresc .kontener{
+	flex-wrap: wrap;
+}
+#tresc .kolumna{
+	flex: 1 1 300px;
+	padding: 50px;
+}
+#tresc h1{
+	font-size: 42px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 20px 0;
+	text-align: center;
+}
+#tresc .pZielony{
+	background-color: #4CAF50;
+  	border: none;
+  	color: white;
+  	padding: 15px 25px;
+  	text-align: center;
+  	font-size: 16px;
+  	cursor: pointer;
+  	border-radius: 100px;
+  	margin: 20px auto;
+	display: block;
+}
+
+/********************************/
+
+#statystyki{
+
+	background:url(../img/staystyki_tlo.jpg)no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#statystyki .kontener{
+	flex-wrap: wrap;
+
+	text-align: center;
+}
+
+#statystyki .kolumna{
+	text-align: center;
+	flex: 1 1 200px;
+	padding: 50px;
+	color: white;
+}
+
+#statystyki h1{
+	font-size: 65px;
+	font-weight: 900;
+	padding: 80px 0px 30px 0px;
+}
+
+}
+#statystyki h2{
+	font-size: 65px;
+	font-weight: 900;
+	padding: 80px 80px 0px 0px;
+}
+
+/********************************/
+#korzysci .kontener{
+	flex-wrap: wrap;
+	flex: 1 1 600px;
+}
+
+#foto1 {	
+	height: 698px;
+	width: 600px;
+	background:url(../img/3_apki.png)no-repeat center center;
+	background-size: contain;
+	
+}
+/*
+
+#foto1 .zdjmob{	
+	display: none;	
+}
+
+#foto1 .zdjdesk{	
+	display: block;	
+}
+*/
+
+#korzysci h1{
+	font-size: 42px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 20px;
+	color: gray;
+
+}
+#lista_korzysci {
+	margin-top: 100px;
+	margin-left: 100px;
+}
+#korzysci ol li {
+	font-size: 22px;
+	font-weight: 300;
+	color: gray;
+	list-style-type: circle;
+	
+	
+}
+#korzysci ul li {
+	font-size: 22px;
+	font-weight: 300;
+	color: gray;
+	list-style-type: square;
+	margin-left: 50px;
+	
+	
+}
+
+/********************************/
+
+#zach .kontener{
+	flex-wrap: wrap;
+	flex: 1 1 600px;
+}
+#zach #zacheta {
+
+	margin: 180px 80px 80px 80px;
+
+}
+
+#zach #zacheta h1{
+	font-size: 40px;
+	font-weight: 300;
+	margin: 10px 0px 0px 0px;
+	
+	color: gray;
+}
+#foto2 {	
+	height: 779px;
+	width: 600px;
+	background:url(../img/2_apki.png)no-repeat center center;
+	background-size: contain;
+	
+}
+
+.appStor {
+
+	margin: 0 auto;
+	
+}
+
+#foot {
+	background: gray;
+}
+#foot .kontener {
+	font-size: 26px;
+	font-weight: 100;
+	color: white;
+	margin:0 auto;
+    display:block;
+    padding: 60px;
+}
+
+
+
+
+/***********************************@media all and (max-width:600px) {***********/
+@media all and (max-width:600px) {
+	
+	#desktop-menu{display: none;}
+	
+	#smartfon-menu{display: block;
+
+	}
+	#top{
+		height: 100vh;
+		background:url(../img/Top_mobail.jpg)no-repeat center right fixed;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  	padding-top: 10px;
+	}
+	#top h1{font-size: 48px;}
+	#top h2{font-size: 60px;}
+	
+	#tresc{
+		height: auto;
+		font-size: 20px;
+	}
+#statystyki h1{
+	font-size: 100px;
+	font-weight: 900;
+
+}
+#statystyki h2{
+	font-size: 30px;
+	font-weight: 800;
+}
+
+#foto1 {	
+	height: 300px;
+	background:url(../img/3_apki.png)no-repeat center left fixed;
+	background-size: contain;
+}
+
+#foto1 .zdjmob{	
+	display: block;
+}
+
+#foto1 .zdjdesk{		
+	display: none;
+}
+#foto2 {	
+	height: 779px;
+	width: 600px;
+	background:url(../img/2_apki.png)no-repeat center center fixed;
+	background-size: contain;
+	
+}
+.appStor {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+@media handheld{
+#top{
+		height: 100vh;
+		background:url(../img/Top_mobail.jpg)no-repeat center right fixed;
+		padding-top: 10px;
+	}
+}	
+	
