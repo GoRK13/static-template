@@ -1,12 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Static Template</title>
+    <meta charset="utf-8" />
+
+    <!--responsywność w html-->
+    <meta name="viewport" content="width=device-width-initial-scale=1.0" />
+    <title>Mini blog Karola o avocado</title>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
   </head>
+
   <body>
-    <h1>This is a static template, there is no bundler or bundling involved!</h1>
+    <nav id="smartfon-menu">
+      <input type="checkbox" id="burger-shower" class="burger-shower" />
+
+      <label for="burger-shower" class="hamburger">
+        <hr />
+        <hr />
+        <hr />
+      </label>
+
+      <ul class="burger-menu">
+        <li>
+          <label for="burger-shower">
+            <a href="#top">top</a>
+          </label>
+        </li>
+
+        <li>
+          <label for="burger-shower">
+            <a href="#tresc">treść</a>
+          </label>
+        </li>
+
+        <li>
+          <label for="burger-shower">
+            <a href="#statystyki">statystyki</a>
+          </label>
+        </li>
+
+        <li>
+          <label for="burger-shower">
+            <a href="#korzysci">korzyści</a>
+          </label>
+        </li>
+        <li>
+          <label for="burger-shower">
+            <a href="#pielegnacja">pielęgnacja</a>
+          </label>
+        </li>
+      </ul>
+    </nav>
+    <nav id="desktop-menu">
+      <ol>
+        <li class="space">
+          <a href="#top"><img src="img/logo2.png"/></a>
+        </li>
+        <li class="space"></li>
+        <li><a href="#tresc">treść</a></li>
+        <li><a href="#statystyki">statystyki</a></li>
+        <li><a href="#korzysci">korzyści</a></li>
+        <li><a href="#pielegnacja">pielęgnacja</a></li>
+      </ol>
+    </nav>
+
+    <section id="top">
+      <div class="kontener">
+        <h1>Zasadź własne awokado w domu</h1>
+      </div>
+    </section>
+
+    <section id="tresc">
+      <div class="kontener">
+        <div class="kolumna">
+          <h2>skąd pomysł</h2>
+          <p>
+            </br>
+            zawsze intrygowała mnie ta wielka pestka w środku smacznego owocu aż
+            w końcu pewnego dnia po zjedzeniu awokado siostra przekazała mi tą
+            miłąw dotyku pestkę do zasadzenia. Właśnie wtedy rozpoczeła się moja
+            przygoda z drzewkiem awokado.
+          </p>
+        </div>
+       
+
+        <div class="kolumna">
+          <h2>Jak zasadzić własne awokado w domu?</h2>
+          <p>
+          </br>
+            potrzebne rzeczy: owoc awokado, szklanka, sporo wody, doniczka z
+            małą ilością ziemi. Na początku obieramy owoc ze skórki i zjadamy
+            jego jadalną część. Po jedzeniu odkładamy na bok pestkę i
+            przygotowujemy potrzebne rzeczy. Średniej wielkości szklankę
+            napełniamy prawie do połowy wodą i ustawiamy w słonecznym miejscu.
+            Następnie wracamy do pestki i płuczemy ją z resztek owocu, po
+            wytarciu wkładamy ją do szklanki z wodą. Co około dwa dni wodę w
+            szklance zmieniamy wodę. Po mniejwięcej trzech tygodniach wyciągamy
+            pestkę i wkładamy ją do doniczki i obsypujemy ziemią. Potem
+            wystarczy podlewać pestkę kiedy widzimy, że ma ona suchą ziemię.
+          </p>
+        </div>
+        <div class="kolumna">
+            <h2>Coś na temat moich drzewek</h2>
+            <p>
+              </br>
+              Swoje awokado zasadziłem około pół roku temu, po tym jak siostra
+              dała mi jego pestkę do zasadzenia. Dziś awokado te jest małym
+              drzewkiem o wyskości 25 centymetrów. Podlewam je średnio co dwa dni,
+              ponieważ wymaga ono bardzo dużej ilości wody. Po jakimś czasie
+              zasadzilem drugie drzewko, teraz mój pokój przyozdabiany jest przez
+              dwa ładne, malutkie drzewka.
+            </p>
+          </div>
+      </div>
+    </section>
+
+    <section id="statystyki">
+      <div class="kontener">
+        <div class="kolumna">
+          <img src="img/iko_img3.png" />
+          <h1>36 000</h1>
+          <h2>#awokado</h2>
+        </div>
+
+        <div class="kolumna">
+          <img src="img/woda3.png" />
+          <h1>320 l</h1>
+          <h2>1 owoc</h2>
+        </div>
+
+        <div class="kolumna">
+          <img src="img/dab.png" />
+          <h1>25 m</h1>
+          <h2>wysokości</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="korzysci">
+      <div class="kontener">
+        <div id="foto1"></div>
+
+        <div id="lista_korzysci">
+          <h1>korzyści</h1>
+          <ol>
+            <li>Sześcioletnie drzewko ma szansę na owocowanie</li>
+            <li>
+              Drzewko mimo, że w młodych latach nie ma owoców, </br>
+              wygląda ono pięknie w pokoju
+            </li>
+            <li>Satysfakcja z samodzilnego zasadzenia drzewka</li>
+          </ol>
+        </div>
+      </div>
+    
+    </section>
+
+    <section id="zach">
+      <div class="kontener">
+        <div id="zacheta">
+          <h1>awokado to nie warzywo</h1>
+          <h1>awokado to...</h1>
+          <h1>owoc</h1>
+        </div>
+        <div id="foto2"></div>
+      </div>
+    </section>
+
+    <section id="pielegnacja">
+      <div class="kontener">
+        <div class="obrazek_avocado">
+          <img class="appStor" src="img/avocado.jpg" />
+        </div>
+      </div>
+      <div class="kontener">
+        <div class="tekscik">
+          <!--
+				test
+      -->
+          <div class="pielegnacja">
+            <h1>
+              Pielęgnacja Awokado
+            </h1>
+          
+            <p>
+              </br>
+              Warto podlewać awkoado codziennie w mniejszych ilościach.
+              Pamiętajcie aby dbać o temperature w pomieszczeniu z drzewkiem
+              jest to ważne, ponieważ im bardziej utworzymy warunki do jej
+              naturalnych, tym lepiej będzie ono rosnąć. Donicę z awokado należy
+              ustawić w miejscu słonecznym - może to być parapet okna o wystawie
+              południowej (wtedy w upalne dni roślinę warto osłaniać, np.
+              kartkami papieru) lub o wystawie zachodniej. Roślina jest wybitnie
+              ciepłolubna – optymalna temperatura wzrostu wynosi 22-26 st. C.
+              Latem można ją wystawiać do ogrodu lub na balkon. Zimą temperatura
+              nie powinna spadać poniżej 10 st. C. Zalecana temperatura w
+              okresie spoczynku wynosi ok 15 st. C.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="foot">
+      <div class="kontener">
+        <center><p>Copyright &copy; Karol Szwedzinski 2020</p></center>
+      </div>
+    </footer>
   </body>
 </html>
